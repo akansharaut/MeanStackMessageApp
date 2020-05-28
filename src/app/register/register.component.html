@@ -1,1 +1,29 @@
-<p>register works!</p>
+<mat-card>
+    <form [formGroup]="form">
+        <mat-card-content>
+            <mat-form-field>
+                <input formControlName="firstName" matInput placeholder="First Name" />
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input formControlName="lastName" matInput placeholder="Last Name" />
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input formControlName="email" type="email" matInput placeholder="Email" />
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input formControlName="password" type="password" matInput placeholder="Password" />
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input formControlName="confirmPassword" matInput placeholder="Confirm Password" />
+            </mat-form-field>
+            <br>
+            <mat-card-actions>
+                <button (click)="onSubmit()" mat-raised-button color="primary"> Register </button>
+            </mat-card-actions>
+        </mat-card-content>
+    </form>
+</mat-card>
